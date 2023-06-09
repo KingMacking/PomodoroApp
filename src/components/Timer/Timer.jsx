@@ -1,12 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import { Icon } from '@iconify/react';
+
+import 'react-circular-progressbar/dist/styles.css';
+
+import notificationSound from '../../assets/notification.mp3'
 
 const Timer = ({configs, timer, setCurrentTimer, currentTimer}) => {
     const [remainingTime, setRemainingTime] = useState(timer*60)
     const [isPaused, setIsPaused] = useState(true)
     const [isFinished, setIsFinished] = useState(false)
+    const notificationRef = useRef(null)
 
     useEffect(() => {
         if(remainingTime !== 0 && !isPaused){
@@ -14,6 +18,7 @@ const Timer = ({configs, timer, setCurrentTimer, currentTimer}) => {
             return () => clearTimeout(timeout)
         } else if (remainingTime === 0) {
             currentTimer === configs.timers.length - 1 ? setIsFinished(true) : setCurrentTimer(currentTimer+1)
+            notificationRef.current.play()
         }
     }, [remainingTime, isPaused])
 
@@ -60,6 +65,7 @@ const Timer = ({configs, timer, setCurrentTimer, currentTimer}) => {
                         </>
                 }
             </CircularProgressbarWithChildren>
+            <audio ref={notificationRef} src={notificationSound} />
         </div>
     )
 }

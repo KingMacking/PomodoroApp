@@ -1,4 +1,4 @@
-const ModalForm = ({configs, setConfigs}) => {
+const ModalForm = ({configs, setConfigs, setIsOpen}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const color = e.target.color.value
@@ -12,6 +12,7 @@ const ModalForm = ({configs, setConfigs}) => {
             color: color,
             timers: [pomodoro, short, pomodoro, short, pomodoro, short, pomodoro, long]
         })
+        setIsOpen(false)
     }
 
     return (
@@ -21,15 +22,15 @@ const ModalForm = ({configs, setConfigs}) => {
                 <div className="flex w-full gap-4">
                     <div className="flex flex-col">
                         <label htmlFor="pomodoro" className="text-sm font-medium">pomodoro</label>
-                        <input defaultValue={25} className="w-full px-1 py-2 rounded-md bg-primary/10" type="number" name="pomodoro" id="pomodoro"/>
+                        <input defaultValue={25} className="w-full px-2 py-2 rounded-md bg-primary/10" type="number" name="pomodoro" id="pomodoro"/>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="short" className="text-sm font-medium">short break</label>
-                        <input defaultValue={5} className="w-full px-1 py-2 rounded-md bg-primary/10" type="number" name="short" id="short"/>
+                        <input defaultValue={5} className="w-full px-2 py-2 rounded-md bg-primary/10" type="number" name="short" id="short"/>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="long" className="text-sm font-medium">long break</label>
-                        <input defaultValue={20} className="w-full px-1 py-2 rounded-md bg-primary/10" type="number" name="long" id="long"/>
+                        <input defaultValue={20} className="w-full px-2 py-2 rounded-md bg-primary/10" type="number" name="long" id="long"/>
                     </div>
                 </div>
             </section>

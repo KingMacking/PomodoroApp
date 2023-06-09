@@ -27,7 +27,7 @@ function App() {
             <ConfigsBtn setIsOpen={setIsOpen}/>
             <Footer />
             <Modal show={isOpen} onClose={() => setIsOpen(false)} title={"Settings"}>
-                <ModalForm configs={configs} setConfigs={setConfigs} />
+                <ModalForm configs={configs} setConfigs={setConfigs} setIsOpen={setIsOpen} />
             </Modal>
         </div>
     )

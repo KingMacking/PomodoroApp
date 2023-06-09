@@ -1,28 +1,28 @@
-# [_**PasswordGenerator**_](https://passwordgenerator-km.netlify.app "Live app")
+# [_**Pomodoro App**_](https://pomodoro-km.netlify.app "Live app")
 
 <p align='center'>
-    🔐¡Visualiza la app haciendo click en la imagen!🔐
+    🍅¡Visualiza la app haciendo click en la imagen!🍅
 </p>
 <p align='center'>
-    <a href="https://passwordgenerator-km.netlify.app"><img height="300"src="https://raw.githubusercontent.com/KingMacking/PasswordGenerator/master/src/assets/banner.png"></a>
+    <a href="https://pomodoro-km.netlify.app"><img height="300"src="https://raw.githubusercontent.com/KingMacking/PomodoroApp/master/src/assets/banner.png"></a>
 </p>
 
-## Password Generator
-Generador de contraseñas seguras con números y símbolos incluidos. <br>
-Hecha con React, Tailwind CSS y mucho amor 💜
+## Pomodoro App
+Temporizador de método pomodoro para mejorar tu productividad.<br>
+Hecho con React, Tailwind CSS y mucho amor 💜
 
 
-## Contraseñas seguras
+## Productividad al 100%
 
-"Password Generator" es una aplicación en la cual podrás crear una contraseña segura para tus cuentas.
+"Pomodoro App" es una aplicación en la cual podrás controlar y mejorar tu productividad gracias al método pomodoro.
 
-- Cálculo de fuerza de la contraseña. 💪🏻
-- Opciones personalizables. 🔏
+- Configuración de los tiempos a tu gusto. ⏱
 
 ## Features
 
-- **Darkmode:** Posibilidad de elegir entre los distintos temas, claro y oscuro, el cual tiene persistencia de usuario.
-- **Cálculo de fuerza:** Según las opciones y cantidad de caracteres, se genera un cálculo de la fuerza de la contraseña que se genera.
+- **Colormode:** Posibilidad de elegir el color a gusto del usuario, permitiendo así que la aplicación sea más personalizable.
+- **Ciclo pomodoro completo:** La aplicación se basa en un ciclo de 4x1, donde 4 es el número de "pomodoros" que se realizan y 1 es la pausa larga, teniendo en medio 3 pausas cortas además.
+- **Notificaciones con sonido:** El temporizador cuenta con notificaciones que sonarán cada vez que se hace un cambio entre los distintos tiempos.
 
 ## Tecnologias Utilizadas
 ### _Lenguajes_
@@ -41,13 +41,13 @@ Hecha con React, Tailwind CSS y mucho amor 💜
 ### _Librerias_
 
 - [Iconify] - Librería de iconos.
-- [react-copy-to-clipboard] - Librería de componentes.
+- [react-circular-progressbar] - Librería de componentes.
 
 
 ## Instalación
 1. Clonar el repositorio
 ```sh
-git clone https://github.com/KingMacking/PasswordGenerator.git
+git clone https://github.com/KingMacking/PomodoroApp.git
 ```
 2. Instalar las dependencias desde NPM
 ```sh
@@ -59,13 +59,13 @@ npm run dev
 ```
 ## Preview
 
-![Site_Preview](https://imgur.com/zERaV6w.png "Site preview")
-![Site_Preview](https://imgur.com/WDCSYww.png "Site preview")
-![Site_Preview](https://imgur.com/JQcbgSQ.png "Site preview")
+![Site_Preview](https://imgur.com/8738aZY.png "Site preview")
+![Site_Preview](https://imgur.com/sLYGZaC.png "Site preview")
+![Site_Preview](https://imgur.com/ebyuNML.png "Site preview")
 
 ## Licencia
 Distribuido bajo la licencia MIT.
 
 
 [Iconify]: <https://icon-sets.iconify.design>
-[react-copy-to-clipboard]: <https://www.npmjs.com/package/react-copy-to-clipboard>
+[react-circular-progressbar]: <https://www.npmjs.com/package/react-circular-progressbar>
